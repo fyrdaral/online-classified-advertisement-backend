@@ -3,10 +3,10 @@ from rest_framework.response import Response
 
 
 @api_view(['GET'])
-def auth_over_view(request):
+def api_over_view(request):
     api_urls = {
-        'Get Token': '/authentication/',
-        'Refresh Token': '/authentication/refresh/',
+        'Authentication': '/authentication/',
+        'Users': '/users/',
     }
 
     return Response(api_urls)
