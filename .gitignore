@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Confidential
+confidential.py
+
+# IDE Project
+.idea
