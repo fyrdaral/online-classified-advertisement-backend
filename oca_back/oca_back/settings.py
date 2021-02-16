@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'user',
     'authentication',
     'documentation',
+    'department',
 ]
 
 MIDDLEWARE = [

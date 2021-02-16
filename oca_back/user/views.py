@@ -8,10 +8,10 @@ from .serializer import UserSerializer
 def user_over_view(request):
     api_urls = {
         'List': '/users/',
-        'Detail View': '/users/<str:pk>',
+        'Detail View': '/users/<int:pk>',
         'Create': '/users/',
-        'Update': '/users/<str:pk>',
-        'Delete': '/users/<str:pk>',
+        'Update': '/users/<int:pk>',
+        'Delete': '/users/<int:pk>',
     }
 
     return Response(api_urls)

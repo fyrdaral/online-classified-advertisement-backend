@@ -7,6 +7,7 @@ def api_over_view(request):
     api_urls = {
         'Authentication': '/authentication/',
         'Users': '/users/',
+        'Departments': '/departments/',
     }
 
     return Response(api_urls)
