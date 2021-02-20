@@ -26,3 +26,12 @@ class IsAdminOrReadOnly(BasePermission):
             return True
         else:
             return request.user.is_staff
+
+
+class IsAuthenticatedOrReadCreateOnly(BasePermission):
+    def has_permission(self, request, view):
+        if (request.method in ['GET', 'HEAD', 'OPTIONS', 'POST']) or (request.user and
+                request.user.is_authenticated and (
+                view.kwargs['pk'] == request.user.id or request.user.is_staff)):
+            return True
+        return False
