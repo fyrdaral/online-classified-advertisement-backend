@@ -29,6 +29,9 @@ class IsAdminOrReadOnly(BasePermission):
 
 
 class IsAuthenticatedOrReadCreateOnly(BasePermission):
+    """
+    The request is authenticated as an admin / same user, or is a read-only and create request.
+    """
     def has_permission(self, request, view):
         if (request.method in ['GET', 'HEAD', 'OPTIONS', 'POST']) or (request.user and
                 request.user.is_authenticated and (
