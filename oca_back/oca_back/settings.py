@@ -44,8 +44,10 @@ INSTALLED_APPS = [
 
     'user',
     'authentication',
+    'api',
     'documentation',
     'department',
+    'advertisement',
 ]
 
 MIDDLEWARE = [
